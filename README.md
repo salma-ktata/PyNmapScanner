@@ -53,7 +53,6 @@ pip install python-nmap
 Edit the target and scan options in portscanner.py:
 
 ```python
-Copier le code
 target = "45.33.32.156"
 options = "-T4 -F"
 ```
@@ -90,10 +89,11 @@ You should never scan systems you do not own or have explicit authorization to t
 
 This tool relies on Nmap, so scan duration depends on the selected options.
 
-Mode Options Description Speed
-Fast -T4 -F Scans common ports only ⚡ Fast
-Balanced -sV -T4 -p 1-1000 Version detection on common ports ⏳ Medium
-Deep -sV -sC Version detection + default NSE scripts 🐢 Slow
+| Mode     | Options          | Description                              | Speed     |
+|----------|------------------|------------------------------------------|-----------|
+| Fast     | `-T4 -F`         | Scans common ports only                  | ⚡ Fast   |
+| Balanced | `-sV -T4 -p 1-1000` | Version detection on common ports        | ⏳ Medium |
+| Deep     | `-sV -sC`        | Version detection + default NSE scripts  | 🐢 Slow   |
 
 ### ⚠️ Deep scans can take 10+ minutes, especially:
 
